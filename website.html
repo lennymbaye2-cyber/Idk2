@@ -24,6 +24,18 @@
       <label class="source"><input type="checkbox" value="site:gamejolt.com" checked /> Game Jolt</label>
     </div>
 
+    <div class="categories">
+      <strong style="display:block;margin-bottom:8px">Categories</strong>
+      <label class="source"><input type="checkbox" value="action" /> Action</label>
+      <label class="source"><input type="checkbox" value="adventure" /> Adventure</label>
+      <label class="source"><input type="checkbox" value="rpg" /> RPG</label>
+      <label class="source"><input type="checkbox" value="platformer" /> Platformer</label>
+      <label class="source"><input type="checkbox" value="puzzle" /> Puzzle</label>
+      <label class="source"><input type="checkbox" value="strategy" /> Strategy</label>
+      <label class="source"><input type="checkbox" value="multiplayer" /> Multiplayer</label>
+      <label class="source"><input type="checkbox" value="indie" /> Indie</label>
+    </div>
+
     <div class="note">Search uses DuckDuckGo and filters selected sources. Results open the official pages — download only from those pages to stay legal and safe.</div>
 
     <div class="results" id="results"></div>
@@ -38,7 +50,9 @@
     function buildQuery(){
       const text = q.value.trim();
       const checks = Array.from(document.querySelectorAll('.sources input:checked')).map(i=>i.value).join(' OR ');
+      const cats = Array.from(document.querySelectorAll('.categories input:checked')).map(i=>i.value).join(' OR ');
       let query = (text?text+' ':'') + 'free game';
+      if(cats) query += ' ('+cats+')';
       if(checks) query += ' ('+checks+')';
       return encodeURIComponent(query);
     }

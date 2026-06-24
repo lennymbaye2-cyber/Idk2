@@ -8,6 +8,7 @@ p.lead{margin:0 0 18px;color:var(--muted)}
 input[type="text"]{flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:#061122;color:var(--white);outline:none}
 select,button{padding:11px 14px;border-radius:10px;border:0;background:var(--accent);color:#042024;font-weight:600}
 .sources{margin:14px 0;display:flex;gap:10px;flex-wrap:wrap}
+.categories{margin:10px 0 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}
 label.source{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:8px;background:rgba(255,255,255,0.02);cursor:pointer}
 label.source input{accent-color:var(--accent)}
 .results{margin-top:18px}
