@@ -15,6 +15,7 @@ public class ExampleMod implements ModInitializer {
     public void onInitialize() {
         ModItems.registerModItems();
         BossDropsAndLifeLeach.register();
+        HeavenlyDoubleJump.register();
         
         // Register smithing handler
         ServerTickEvents.END_PLAYER_TICK.register(player -> {
