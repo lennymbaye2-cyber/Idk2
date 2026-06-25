@@ -1,0 +1,383 @@
+# YimMenuV2 - Improved Outfit Editor Guide
+# Enhanced UI with Better Organization & Safety
+# Last Updated: 2026-06-25
+
+## OVERVIEW
+
+The Improved Outfit Editor provides a more user-friendly interface with better organization of clothing items by category and type.
+
+## FILES CREATED
+
+1. **ImprovedOutfitEditor.hpp** - Header definition with UI layout
+2. **ImprovedOutfitEditor.cpp** - Implementation with rendering logic
+3. **This Guide** - Documentation and usage instructions
+
+Location: `/workspaces/Idk2/YimMenuV2-v3/src/game/frontend/submenus/Self/`
+
+## KEY IMPROVEMENTS
+
+### 1. Tabbed Interface ✅
+
+Instead of a cluttered single page, the outfit editor now uses 5 organized tabs:
+
+1. **Normal Clothes**
+   - Legitimate in-game clothing
+   - Organized by category (Tops, Bottoms, Shoes, etc)
+   - Green indicator showing legitimate items
+   - Safe to use freely
+
+2. **Cheated Items**
+   - Modded/unusual clothing
+   - Warning indicators
+   - FSL protection recommended
+   - Yellow indicator for caution
+
+3. **Special Outfits**
+   - Event-exclusive clothing
+   - Holiday items
+   - Job uniforms
+   - Cyan indicator for special items
+
+4. **Props & Accessories**
+   - Hats, glasses, watches, masks
+   - Two-column layout for easy browsing
+   - Orange indicator
+
+5. **Presets**
+   - Save favorite outfits
+   - Quick load functionality
+   - Business, Casual, Street, Formal presets
+   - Green indicator for saved outfits
+
+### 2. Color-Coded Categories 🎨
+
+Each clothing category has a unique color for quick visual identification:
+
+```
+Tops & Shirts       → Orange (1.0, 0.5, 0.0)
+Undershirts         → Gray (0.7, 0.7, 0.7)
+Pants & Shorts      → Blue (0.0, 0.5, 1.0)
+Shoes & Footwear    → Brown (0.5, 0.25, 0.0)
+Belts & Accessories → Gold (1.0, 0.84, 0.0)
+Bags & Backpacks    → Purple (0.5, 0.0, 0.5)
+Masks & Face Wear   → Red (1.0, 0.0, 0.0)
+Gloves & Hand Wear  → Light Gray (0.9, 0.9, 0.9)
+Armor & Protection  → Green (0.0, 1.0, 0.0)
+Decals & Tattoos    → Magenta (1.0, 0.0, 1.0)
+```
+
+### 3. Separated Item Classification 📂
+
+Items are automatically classified into 3 categories:
+
+**Normal Clothing (Safe)**
+- Drawable index 0-49
+- Standard in-game items
+- No ban risk
+- Always safe to use
+
+**Cheated Items (Caution)**
+- Drawable index 50-99
+- Modded/unusual clothing
+- Requires FSL for safety
+- Warning displayed
+
+**Special Outfits (Event-Only)**
+- Drawable index 100+
+- Limited-time items
+- Event exclusive
+- May be flagged if worn outside events
+
+### 4. Search & Filter 🔍
+
+- Real-time search functionality
+- Filter items by name
+- Separate search for each tab
+- Quick location of specific items
+
+### 5. Collapsible Categories 📋
+
+- Expandable category sections
+- Reduces visual clutter
+- Shows/hides items on demand
+- Remembers open/closed state
+
+### 6. Safety Warnings ⚠️
+
+- Warning indicators on cheated items
+- FSL recommendation displays
+- Account risk information shown
+- Clear visual warnings
+
+### 7. Outfit Presets 💾
+
+Save and load complete outfits:
+
+**Built-in Presets:**
+- Business Outfit (professional look)
+- Casual Look (everyday wear)
+- Street Style (urban appearance)
+- Formal Attire (evening wear)
+
+**Save Functionality:**
+- Click "Save Current Outfit"
+- Saves all clothing slots
+- Stores accessories & props
+- Can load anytime
+
+**Load Functionality:**
+- Select preset from list
+- Click "Load Selected"
+- Instantly applies entire outfit
+- Quick outfit changes
+
+
+## UI LAYOUT STRUCTURE
+
+```
+┌─────────────────────────────────────────────────────────┐
+│  [Normal] [Cheated] [Special] [Props] [Presets]         │
+├─────────────────────────────────────────────────────────┤
+│  Normal In-Game Clothing                                │
+│  🔍 [Search clothing...]                                │
+│                                                          │
+│  ▼ Tops & Shirts                 (Orange)               │
+│    ▶ T-Shirt            [Drawable: 0  ] [Texture: 0  ] │
+│    ▶ Shirt              [Drawable: 1  ] [Texture: 0  ] │
+│    ▶ Jacket             [Drawable: 2  ] [Texture: 0  ] │
+│                                                          │
+│  ▼ Pants & Shorts               (Blue)                  │
+│    ▶ Pants              [Drawable: 0  ] [Texture: 0  ] │
+│    ▶ Shorts             [Drawable: 1  ] [Texture: 0  ] │
+│                                                          │
+│  ▶ Shoes & Footwear             (Brown)                 │
+│  ▶ Belts & Accessories          (Gold)                  │
+└─────────────────────────────────────────────────────────┘
+```
+
+## HOW TO USE
+
+### Step 1: Open Outfit Editor
+1. Launch YimMenuV2
+2. Go to Self → Outfit Editor
+3. Improved Outfit Editor opens with tabs
+
+### Step 2: Select Tab
+- Click tab for desired outfit type
+- Normal: Legitimate clothing
+- Cheated: Modded items
+- Special: Event outfits
+- Props: Accessories
+- Presets: Save/load outfits
+
+### Step 3: Browse by Category
+- Click category to expand
+- See all items in category
+- Search using filter if needed
+
+### Step 4: Apply Clothing
+- Modify drawable/texture values
+- Changes apply instantly
+- Preview on character
+- Adjust as needed
+
+### Step 5: Save as Preset (Optional)
+- Customize outfit completely
+- Click "Save Current Outfit"
+- Name your preset
+- Load later anytime
+
+## CLASSIFICATION LOGIC
+
+### Normal vs Cheated Detection
+
+```cpp
+// Returns true for normal items
+bool IsNormalClothing(int slot, int drawable)
+{
+    return drawable >= 0 && drawable < 50;
+}
+
+// Returns true for modded items
+bool IsCheatedClothing(int slot, int drawable)
+{
+    return drawable >= 50 && drawable < 100;
+}
+
+// Returns true for special items
+bool IsSpecialClothing(int slot, int drawable)
+{
+    return drawable >= 100;
+}
+```
+
+**Application:**
+- System checks drawable index
+- Automatically categorizes
+- Assigns to appropriate tab
+- Applies visual indicator
+
+## SAFETY RECOMMENDATIONS
+
+### Safe Usage ✅
+
+**Normal Clothes Tab:**
+- No warnings needed
+- Safe anytime
+- No ban risk
+- Use freely
+
+**With FSL Protection:**
+- Can use Cheated Items
+- Use Special Outfits
+- Monitor account
+- Stay within reason
+
+### Unsafe Usage ❌
+
+**Without FSL:**
+- Don't use Cheated Items
+- Don't use Special Outfits
+- Stick to Normal Clothes
+- High ban risk otherwise
+
+**Extreme Combinations:**
+- Avoid mixing suspicious items
+- Don't wear police uniforms constantly
+- Don't use military gear online
+- Blend in with other players
+
+## FEATURES NOT YET IMPLEMENTED
+
+The improved editor provides structure for:
+
+⏳ Advanced drawable/texture previews
+⏳ Real-time character model updates
+⏳ Outfit thumbnail previews
+⏳ Outfit sharing/export
+⏳ Filter by color/style
+⏳ Randomize outfit
+⏳ Undo/redo functionality
+
+These can be added in future updates!
+
+## INTEGRATION NOTES
+
+To integrate into YimMenuV2:
+
+1. **Update OutfitEditor.cpp:**
+   ```cpp
+   #include "ImprovedOutfitEditor.hpp"
+   
+   // In menu rendering:
+   ImprovedOutfitEditor::RenderImprovedOutfitEditor();
+   ```
+
+2. **Add to category:**
+   ```cpp
+   category->AddItem(std::make_shared<ImGuiItem>([] {
+       ImprovedOutfitEditor::RenderImprovedOutfitEditor();
+   }));
+   ```
+
+3. **Rebuild:**
+   ```bash
+   cd /workspaces/Idk2/YimMenuV2-v3
+   mkdir build && cd build
+   cmake ..
+   cmake --build . --config Release
+   ```
+
+## BENEFITS COMPARISON
+
+### Original Outfit Editor:
+- Two-column layout
+- Mixed normal/cheated items
+- No search functionality
+- Manual drawable browsing
+- No presets
+- Hard to find items
+- No visual categorization
+
+### Improved Outfit Editor:
+✅ Organized tabs
+✅ Separated item types
+✅ Search & filter
+✅ Color-coded categories
+✅ Preset system
+✅ Quick access
+✅ Visual indicators
+✅ Safety warnings
+✅ Better UI/UX
+✅ Scalable design
+
+## TROUBLESHOOTING
+
+### Items not showing in tabs?
+- Check drawable range values
+- Verify clothing exists for character
+- Some items gender-specific
+
+### Search not working?
+- Check filter input
+- Clear filter to reset
+- Try partial name
+
+### Presets not saving?
+- Ensure character loaded
+- Check save directory
+- Verify permissions
+
+### Drawable values not applying?
+- Verify max drawable range
+- Check texture compatibility
+- Reload character
+
+## FUTURE ENHANCEMENTS
+
+Potential improvements for v2:
+
+1. **Visual Preview Panel**
+   - Show clothing on model
+   - Color preview
+   - Quick comparison
+
+2. **Outfit History**
+   - Track recent outfits
+   - Quick revert
+   - Undo/redo
+
+3. **Advanced Search**
+   - Filter by rarity
+   - Filter by color
+   - Filter by style
+
+4. **Outfit Generator**
+   - Random outfit creation
+   - Style-based generation
+   - Color coordination
+
+5. **Clothing Variants**
+   - Show all textures
+   - Color swatches
+   - Texture preview
+
+6. **Import/Export**
+   - Share outfits
+   - Cloud sync
+   - Community presets
+
+## CONCLUSION
+
+The Improved Outfit Editor provides:
+✅ Better organization
+✅ Safer item classification
+✅ More user-friendly interface
+✅ Efficient browsing & searching
+✅ Quick outfit switching
+✅ Visual safety indicators
+
+Perfect for players who want to customize their character efficiently and safely!
+
+Enjoy customizing your GTA Online character! 👕👖👠
+

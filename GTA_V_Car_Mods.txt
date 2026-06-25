@@ -1,0 +1,67 @@
+# GTA V Addon Cars Compatible with YimMenuV2
+# Last Updated: 2026-06-25
+
+## COMPATIBLE WITH YimMenuV2 - Single Player Car Spawning
+
+These repositories contain addon cars that can be spawned in-game using YimMenuV2:
+
+1. GTAVAddonLoader - GTA V Addon/Mod Loading System (MAIN TOOL REQUIRED)
+   https://github.com/ikt32/GTAVAddonLoader
+   Description: Essential loader for installing and managing addon cars in GTA V
+   Used by: YimMenuV2 to spawn addon vehicles
+
+2. Gameconfig-addon-GTA-V - Game Configuration for Addon Cars (REQUIRED)
+   https://github.com/bashvoye/Gameconfig-addon-GTA-V-1.0.1868.4
+   Description: Required patch that enables support for additional addon cars
+   Version: 1.0.1868.4
+
+3. DeeperGTAV - Enhanced GTA V Modding Framework (OPTIONAL)
+   https://github.com/gdpinchina/DeeperGTAV
+   Description: Advanced modding framework for extended car functionality
+
+
+## How to Spawn Addon Cars with YimMenuV2
+
+Step 1: Install GTAVAddonLoader
+  - Clone: git clone https://github.com/ikt32/GTAVAddonLoader.git
+  - Follow installation instructions in README
+
+Step 2: Install Gameconfig Patch
+  - Apply the gameconfig modification from the Gameconfig-addon-GTA-V repository
+  - This allows more addon cars to load simultaneously
+
+Step 3: Add Addon Car Mods
+  - Download car mod packages (typically .ytd and .yft files)
+  - Place them in GTAVAddonLoader's designated folder
+  - Update configuration files as needed
+
+Step 4: Launch GTA V
+  - Start GTA V with GTAVAddonLoader
+  - Make sure mods load correctly
+
+Step 5: Inject YimMenuV2
+  - Use your injector to inject YimMenuV2.dll
+  - Open YimMenuV2 menu (INSERT key or Ctrl+\)
+  - Navigate to vehicle spawning menu
+  - Spawn your addon cars!
+
+
+## Important Notes
+
+- GTAVAddonLoader MUST be installed first
+- Gameconfig patch is REQUIRED for stability
+- Always backup your game files before modding
+- Test in single-player first
+- Check repository licenses and usage rights
+- Use only cars compatible with your game version (1.0.1868.4+)
+
+## Finding Addon Car Packs
+
+Most addon car mods are found on:
+- GTA V modding forums (external)
+- Mod download sites
+- GitHub repositories with .ytd/.yft files
+- Community modding Discord servers
+
+Note: GitHub has limited detailed car packs; most are on external modding sites
+

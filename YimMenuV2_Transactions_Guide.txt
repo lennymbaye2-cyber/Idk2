@@ -1,0 +1,359 @@
+# YimMenuV2 Transactions Guide
+# Complete List of All Available Transactions and Categories
+# Last Updated: 2026-06-25
+
+## TRANSACTION ACTIONS (28 Total)
+
+### Money & Currency Operations
+1. EARN
+   - Description: Gain currency/money from various in-game activities
+   - Use Case: Earn cash from jobs, businesses, activities
+   
+2. EARN_LIMITED_SERVICE
+   - Description: Gain currency from limited-time services
+   - Use Case: Earn money from special events or time-limited services
+   
+3. SPEND
+   - Description: Spend/deduct currency from player account
+   - Use Case: Paying for items, services, transactions
+   
+4. SPEND_LIMITED_SERVICE
+   - Description: Spend currency on limited-time services
+   - Use Case: Purchase limited-availability services
+   
+5. GIVE
+   - Description: Transfer currency/items to another player
+   - Use Case: Give money to friends or crew members
+   
+6. RECOUP
+   - Description: Recover/refund currency or items
+   - Use Case: Refunds or money recovery transactions
+
+### Item Acquisition & Shopping
+7. BUY_ITEM
+   - Description: Purchase general items from shops
+   - Use Case: Buy clothing, accessories, consumables
+   
+8. ACQUIRE
+   - Description: Acquire items without standard purchase
+   - Use Case: Obtain items through special methods
+   
+9. USE
+   - Description: Use/consume an item from inventory
+   - Use Case: Use consumables, activators, special items
+   
+10. PURCH
+    - Description: Generic purchase transaction
+    - Use Case: Standard shopping/purchasing action
+
+### Vehicle Operations
+11. BUY_VEHICLE
+    - Description: Purchase a vehicle
+    - Use Case: Buy cars from dealerships or online
+    
+12. SELL_VEHICLE
+    - Description: Sell a vehicle you own
+    - Use Case: Sell cars for money
+    
+13. BUY_VEHICLE_MODS
+    - Description: Purchase vehicle modifications/upgrades
+    - Use Case: Buy engine parts, wheels, visual mods
+    
+14. UPDATE_WAREHOUSE_VEHICLE
+    - Description: Update vehicle stored in warehouse
+    - Use Case: Modify vehicle data in warehouse storage
+
+### Property & Business
+15. BUY_PROPERTY
+    - Description: Purchase real estate/properties
+    - Use Case: Buy houses, apartments, businesses
+    
+16. BUY_WAREHOUSE
+    - Description: Purchase a warehouse business
+    - Use Case: Buy MC Businesses, Nightclubs, Arcades
+    
+17. RESET_BUSINESS_PROGRESS
+    - Description: Reset/wipe business progress and inventory
+    - Use Case: Clear business stock and reset operations
+    
+18. UPDATE_BUSINESS_GOODS
+    - Description: Update/modify business inventory or goods
+    - Use Case: Restock or modify business products
+    
+19. UPDATE_STORAGE_DATA
+    - Description: Update warehouse/storage inventory
+    - Use Case: Modify warehouse stock and data
+
+### Customization & Appearance
+20. CREATE_PLAYER_APPEARANCE
+    - Description: Create/modify character appearance
+    - Use Case: Change character hairstyle, clothing, tattoos
+    
+21. ADD_CONTRABAND
+    - Description: Add illegal/contraband items to inventory
+    - Use Case: Add weapons, drugs, or illegal goods
+    
+22. REMOVE_CONTRABAND
+    - Description: Remove contraband items from inventory
+    - Use Case: Remove illegal items safely
+    
+23. BUY_CONTRABAND_MISSION
+    - Description: Purchase contraband-related missions
+    - Use Case: Buy illegal mission access or goods
+
+### Casino & Entertainment
+24. BUY_CASINO_CHIPS
+    - Description: Purchase casino chips with real money
+    - Use Case: Convert cash to casino chips for gambling
+    
+25. SELL_CASINO_CHIPS
+    - Description: Convert casino chips back to cash
+    - Use Case: Cash out winnings from casino
+
+### Unlocks & Access
+26. BUY_UNLOCK
+    - Description: Purchase unlock for features/items
+    - Use Case: Unlock weapons, customization options
+    
+27. ALLOT
+    - Description: Allocate/assign resources
+    - Use Case: Assign inventory space or resources
+
+### Rarely Used
+28. DELETE_CHAR
+    - Description: Delete a character (not typically used)
+    - Use Case: Character deletion (dangerous)
+
+
+## TRANSACTION CATEGORIES (60 Total)
+
+### Appearance & Customization
+1. BEARD - Facial hair styles
+2. BLUSHER - Makeup blusher options
+3. CHEST_HAIR - Body hair customization
+4. CONTACTS - Eye contact lenses
+5. EYEBROWS - Eyebrow styles
+6. FACEPAINT - Face paint designs
+7. HAIR - Hairstyles
+8. LIPSTICK - Lipstick colors/styles
+9. MKUP - General makeup
+10. TATTOO - Tattoo designs and placement
+
+### Inventory & Storage Items
+11. INVENTORY_BEARD - Stored beard styles
+12. INVENTORY_BLUSHER - Stored blusher
+13. INVENTORY_CHEST_HAIR - Stored body hair
+14. INVENTORY_CONTACTS - Stored contact lenses
+15. INVENTORY_EYEBROWS - Stored eyebrows
+16. INVENTORY_FACEPAINT - Stored face paint
+17. INVENTORY_HAIR - Stored hairstyles
+18. INVENTORY_LIPSTICK - Stored lipstick
+19. INVENTORY_MKUP - Stored makeup
+20. INVENTORY_ITEM - General inventory items (unused)
+
+### Currency & Money
+21. CURRENCY_TYPE - Type of currency (cash, RP, chips)
+22. EARN_CURRENCY - Currency earnings category
+23. INVENTORY_CURRENCY - Stored currency/cash
+
+### Casino System
+24. CASINO_CHIP_REASON - Reason for casino chip transaction
+25. CASINO_CHIPS - Casino chips currency
+26. INVENTORY_PRICE_PAID - Price paid for items
+
+### Contraband & Illegal Items
+27. CONTRABAND_FLAGS - Contraband item flags
+28. CONTRABAND_MISSION - Contraband mission related
+29. CONTRABAND_QNTY - Contraband quantity tracking
+30. INVENTORY_CONTRABAND_MISSION - Stored contraband missions
+
+### Vehicles & Mods
+31. VEHICLE - Vehicle ownership
+32. VEHICLE_MOD - Vehicle modification parts
+33. VEHICLE_UPGRADE - Vehicle upgrades (performance)
+34. INVENTORY_VEHICLE - Stored vehicles
+35. INVENTORY_VEHICLE_MOD - Stored vehicle mods
+36. WAREHOUSE_VEHICLE_INDEX - Warehouse vehicle indexing
+
+### Properties & Businesses
+37. PROPERTY - Real estate properties
+38. PROPERTY_INTERIOR - Property interior customization
+39. WAREHOUSE - Warehouse businesses
+40. WAREHOUSE_INTERIOR - Warehouse interior customization
+41. INVENTORY_PROPERTY - Stored property data
+42. INVENTORY_PROPERTY_INTERIOR - Stored property interiors
+43. INVENTORY_WAREHOUSE - Stored warehouse data
+44. INVENTORY_WAREHOUSE_INTERIOR - Stored warehouse interiors
+
+### Services & Access
+45. SERVICE - Standard services
+46. SERVICE_UNLOCKED - Unlocked/available services
+47. SERVICE_WITH_LIMIT - Services with usage limits
+48. SERVICE_WITH_THRESHOLD - Services with spending thresholds
+49. CLOTH - Clothing items
+50. VENDING_MACHINE - Vending machine items/transactions
+
+### Weapons & Combat
+51. WEAPON - Weapon items
+52. WEAPON_AMMO - Ammunition
+53. WEAPON_MOD - Weapon modifications
+
+### Storage & Data
+54. DATA_STORAGE - Player data storage
+55. DECORATION - Property decoration items
+56. MART - General store/mart items
+57. PRICE_MODIFIER - Price adjustment multiplier
+58. PRICE_OVERRIDE - Override standard pricing
+59. SYSTEM - System-level transactions
+60. UNLOCK - Unlock tokens/access
+
+### Shops
+61. SHOP_CONTROLLER - Main shop system controller
+
+
+## TRANSACTION TYPES
+
+1. BASKET Transactions
+   - Multiple items in one transaction
+   - Can add several items at once
+   - Common for bulk purchases
+   - Example: Buy multiple vehicle mods in one go
+
+2. SERVICE Transactions
+   - Single service action
+   - Direct service purchase
+   - Example: Unlock a specific feature
+
+
+## BANNED ITEMS (Safety Guards)
+
+These items are blacklisted to prevent account bans:
+- SERVICE_EARN_DEBUG - Debug earning service
+- SERVICE_EARN_JBONUS - Jump bonus service
+- SERVICE_EARN_JBONUS_MODEL - Jump bonus with model
+- SERVICE_EARN_JBONUS_NO_DEATH - Jump bonus no death
+- SERVICE_EARN_JBONUS_NO_FALL - Jump bonus no fall
+- SERVICE_EARN_JBONUS_NOT_SEEN - Jump bonus not seen
+- SERVICE_EARN_JBONUS_SE - Jump bonus SE
+- SERVICE_EARN_EVOLVE - Evolution earn service
+- SERVICE_EARN_IMPULSE - Impulse earn service
+
+⚠️ Using these may result in account bans/wipes!
+
+
+## COMMON TRANSACTION WORKFLOWS
+
+### Buying a Vehicle
+Action: BUY_VEHICLE
+Category: VEHICLE
+Type: BASKET
+Steps:
+1. Select VEHICLE category
+2. Use BUY_VEHICLE action
+3. Add vehicle item to basket
+4. Set price
+5. Process transaction
+
+### Buying Vehicle Mods
+Action: BUY_VEHICLE_MODS
+Category: VEHICLE_MOD
+Type: BASKET
+Steps:
+1. Select VEHICLE_MOD category
+2. Use BUY_VEHICLE_MODS action
+3. Add mod items (engine, wheels, etc.)
+4. Set individual prices
+5. Process transaction
+
+### Buying Property
+Action: BUY_PROPERTY
+Category: PROPERTY
+Type: BASKET
+Steps:
+1. Select PROPERTY category
+2. Use BUY_PROPERTY action
+3. Add property item
+4. Set purchase price
+5. Process transaction
+
+### Casino Chips
+Action: BUY_CASINO_CHIPS / SELL_CASINO_CHIPS
+Category: CASINO_CHIPS
+Type: SERVICE or BASKET
+Steps:
+1. Select CASINO_CHIPS category
+2. Use BUY or SELL action
+3. Set chip quantity and price
+4. Process transaction
+
+### Customizing Character
+Action: CREATE_PLAYER_APPEARANCE
+Category: Multiple (HAIR, TATTOO, BEARD, etc.)
+Type: BASKET
+Steps:
+1. Select appearance category (HAIR, TATTOO, etc.)
+2. Use CREATE_PLAYER_APPEARANCE action
+3. Add customization items
+4. Process transaction
+
+### Unlocking Features
+Action: BUY_UNLOCK
+Category: UNLOCK
+Type: BASKET
+Steps:
+1. Select UNLOCK category
+2. Use BUY_UNLOCK action
+3. Add unlock item
+4. Set unlock price
+5. Process transaction
+
+
+## SAFETY RECOMMENDATIONS
+
+✅ Safe Transactions:
+- BUY_VEHICLE with legitimate vehicles
+- BUY_VEHICLE_MODS with standard mods
+- BUY_PROPERTY with real properties
+- BUY_CASINO_CHIPS (normal amounts)
+- CREATE_PLAYER_APPEARANCE
+
+❌ Risky Transactions:
+- Avoid banned items (see list above)
+- Don't use debug/exploit services
+- Avoid extreme money amounts
+- Don't use contraband items recklessly
+- Avoid multiple rapid transactions (may flag AntiCheat)
+
+⚠️ Bank Account Safety:
+- Always use legitimate properties/vehicles
+- Match prices to realistic values
+- Don't spam transactions
+- Use proper laundering methods if modifying money
+- Consider using anticheat bypass if available
+
+
+## TROUBLESHOOTING
+
+Issue: "Failed to create basket"
+- Solution: Make sure category and action are valid pairs
+- Solution: Ensure shop_controller script is active
+
+Issue: Transaction rejected by server
+- Solution: May be flagged by anticheat
+- Solution: Use anticheat bypass features
+- Solution: Wait before attempting again
+
+Issue: Items not appearing in inventory
+- Solution: Check inventory category matches transaction
+- Solution: Verify item hash is correct
+- Solution: Check if item is currently available
+
+
+## NOTES
+
+- Transactions interact with GTA Online's economy system
+- Some transactions may be tracked by Rockstar's anticheat
+- Using anticheat bypass is recommended for recovery
+- Test small transactions before large ones
+- Keep backups of your character data
+
