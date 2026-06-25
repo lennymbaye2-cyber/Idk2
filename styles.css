@@ -5,7 +5,7 @@ body{margin:0;font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial
 h1{margin:0 0 6px;font-size:20px}
 p.lead{margin:0 0 18px;color:var(--muted)}
 .search{display:flex;gap:10px}
-input[type="text"]{flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:#061122;color:var(--white);outline:none}
+input[type="text"]{flex:1;padding:12px 14px;border-radius:10px;border:1px solid rgba(255, 255, 255, 0.04);background:#061122;color:var(--white);outline:none}
 select,button{padding:11px 14px;border-radius:10px;border:0;background:var(--accent);color:#042024;font-weight:600}
 .sources{margin:14px 0;display:flex;gap:10px;flex-wrap:wrap}
 .categories{margin:10px 0 18px;display:flex;gap:10px;flex-wrap:wrap;align-items:center}

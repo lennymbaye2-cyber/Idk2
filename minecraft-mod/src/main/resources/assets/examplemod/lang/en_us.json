@@ -11,5 +11,16 @@
   "item.examplemod.mythic_boots": "Mythic Boots",
   "item.examplemod.mythic_shield": "Mythic Shield",
   "item.examplemod.mythic_elytra": "Mythic Elytra",
+  "item.examplemod.reaper_blade": "Reaper Blade",
+  "item.examplemod.reaper_axe": "Reaper Axe",
+  "item.examplemod.reaper_pickaxe": "Reaper Pickaxe",
+  "item.examplemod.reaper_shovel": "Reaper Shovel",
+  "item.examplemod.reaper_hoe": "Reaper Hoe",
+  "item.examplemod.reaper_helmet": "Reaper Helmet",
+  "item.examplemod.reaper_chestplate": "Reaper Chestplate",
+  "item.examplemod.reaper_leggings": "Reaper Leggings",
+  "item.examplemod.reaper_boots": "Reaper Boots",
+  "item.examplemod.boss_heart": "Boss Heart",
+  "item.examplemod.boss_heart.tooltip": "Use in Smithing Table with Mythic or Reaper armor to unlock life leach. Max 5 hearts per piece.",
   "message.examplemod.hello": "Hello from Example Mod!"
 }
